@@ -5,8 +5,14 @@ export class ToDoApplist extends React.Component{
         super();
     }
     render(){
+        var items = this.props.tasks.map((elem, id) => {
+           return <li key={id}>{elem}</li>
+        });
+
         return(
-        <h2>Add New Task</h2>
+            <ul>
+                {items}
+            </ul>
         )
     }
 }

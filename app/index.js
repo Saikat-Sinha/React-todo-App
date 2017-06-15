@@ -4,15 +4,6 @@ import {Todo} from './components/main';
 
 require('../app/index.css');
 
-class App extends React.Component{
+var tasksList = ['task1','task2'];
 
-    render(){
-        return(
-            <div>
-                <Todo />
-            </div>
-        )
-    }
-}
-
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<Todo tasks={tasksList}/>, document.getElementById('app'));
