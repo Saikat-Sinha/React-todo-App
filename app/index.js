@@ -4,6 +4,10 @@ import {Todo} from './components/main';
 
 require('../app/index.css');
 
-var tasksList = ['task1','task2'];
+var tasksList = [];
+var tasks = localStorage.getItem('storedTasks');
+if(tasks){
+    tasksList = JSON.parse(tasks);
+}
 
 ReactDOM.render(<Todo tasks={tasksList}/>, document.getElementById('app'));
